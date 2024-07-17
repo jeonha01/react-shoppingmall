@@ -2,7 +2,12 @@
     display: flex;
     justify-content: flex-end;
     margin: 20px;
-    /* 로그인 버튼 디테일하게 꾸미기 */
+    margin-top: 35px;
+    margin-right: 40px;
+}
+
+.login {
+    cursor: pointer;
 }
 
 .nav-section {
@@ -15,6 +20,7 @@
     display: flex;
     list-style-type: none;
     margin: 0 auto;
+    margin-bottom: 25px;
 }
 
 .menu-list li {
@@ -47,4 +53,18 @@
     align-items: center;
     position: absolute;
     right: 20px;
+    margin-top: -50px;
+}
+
+.product {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.product:hover {
+    transform: scale(1.1)
+}
+
+.icon {
+    padding: 4px 10px 0 0;
 }

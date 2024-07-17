@@ -2,15 +2,19 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from "react-router";
 
 const Navbor = () => {
+
+    const navigate = useNavigate()
+
     const menuList = ['여성', 'Divided', '남성', '신생아/유아', '아동', 'H&M Home', 'Sale', '지속가능성']
     return (
         <div>
             <div>
-                <div className='login-button'>
-                    <FontAwesomeIcon icon={faUser} />
-                    <div>로그인</div>
+                <div className='login-button' onClick={() => navigate('/login')}>
+                    <FontAwesomeIcon className='icon' icon={faUser} />
+                    <div className='login'>로그인</div>
                 </div>
             </div>
             <div className='nav-section'>
