@@ -10,6 +10,15 @@
     cursor: pointer;
 }
 
+.login-form {
+    width: 650px;
+}
+
+.login-area {
+    display: flex;
+    justify-content: center;
+}
+
 .nav-section {
     display: flex;
     justify-content: center;
@@ -56,15 +65,53 @@
     margin-top: -50px;
 }
 
-.product {
+.card {
+    border: none !important;
     margin-bottom: 10px;
     cursor: pointer;
 }
 
-.product:hover {
-    transform: scale(1.1)
+.card:hover {
+    transform: scale(1.1);
+    z-index: 1;
 }
 
 .icon {
     padding: 4px 10px 0 0;
+}
+
+.product-img {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.detail-price {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.choice {
+    font-size: 11px;
+    color: #63786a;
+    font-weight: bold;
+    margin-bottom: 2px;
+    height: 20px;
+}
+
+.new {
+    font-size: 11px;
+    height: 20px;
+}
+
+.dropdown {
+    margin-top: 20px;
+}
+
+.detail-button {
+    margin-top: 20px;
+    width: 630px;
+    background-color: black;
+    color: white;
+    padding: 10px;
 }
