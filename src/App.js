@@ -31,7 +31,7 @@ function App() {
   }, [authenticate])
   return (
     <div>
-      <Navbor />
+      <Navbor authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
         <Route path='/' element={<ProductAll />} />
         <Route path='/login' element={<Loginpage setAuthenticate={setAuthenticate} />} />
