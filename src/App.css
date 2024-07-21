@@ -89,9 +89,9 @@ body {
 
 } */
 
-.hide-header {
+.header {
     display: flex;
-    justify-content: center;
+    
 }
 
 .hidelogo {
@@ -101,6 +101,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     z-index: 9;
+    right: 35%;
 }
 
 /* .nav-header * {
@@ -176,16 +177,6 @@ body {
 
     
 
-    .hidelogo {
-        display: flex;
-        position: fixed;
-        font-size: 23px;
-        margin-top: 0px;
-        font-weight: bold;
-        cursor: pointer;
-        z-index: 9;
-    }
-
     .hide {
         visibility: visible !important;
     }
@@ -236,7 +227,7 @@ body {
 }
 
 .nav-logo {
-    display: flex;
+    
     position: fixed;
     margin-bottom: 20px;
     visibility: visible;

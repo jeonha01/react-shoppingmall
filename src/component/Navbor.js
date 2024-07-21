@@ -93,7 +93,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
                 </div>
 
             </div>
-            <div className="hide-header">
+            <div className="header">
                 <div className="hidelogo hide" onClick={() => navigate('/')}>N A R E U M</div>
             </div>
             <div className="nav-header">
