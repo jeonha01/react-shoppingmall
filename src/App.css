@@ -80,13 +80,14 @@ body {
     opacity: 1;
 }
 
-.nav-header {
+/* .nav-header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-right: 20px;
     margin-top: 65px;
-}
+
+} */
 
 .hide-header {
     display: flex;
@@ -102,10 +103,10 @@ body {
     z-index: 9;
 }
 
-.nav-header * {
+/* .nav-header * {
     margin-right: 10px;
-    
-}
+
+} */
 
 .side-menu {
     height: 100%;
@@ -157,6 +158,8 @@ body {
     margin-right: 20px;
     position: fixed;
     z-index: 9;
+    right: 10px;
+    top: 30px;
 }
 
 @media screen and (max-width: 63rem) {
@@ -169,6 +172,18 @@ body {
 
     .nav-header {
         display: flex !important;
+    }
+
+    
+
+    .hidelogo {
+        display: flex;
+        position: fixed;
+        font-size: 23px;
+        margin-top: 0px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 9;
     }
 
     .hide {
