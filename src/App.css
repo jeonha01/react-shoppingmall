@@ -1,3 +1,76 @@
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+
+}
+
+.nav-header * {
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.side-menu {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: burlywood;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 2
+}
+
+.side-menu-list button {
+    margin: 5px;
+    border: none;
+    background: none;
+    width: 120px;
+}
+
+.side-menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    border: none;
+    background: none;
+}
+
+.side-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-menu-list button:hover {
+    background-color: beige;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 63rem) {
+    .hide {
+        visibility: visible !important;
+    }
+
+    .menu {
+        display: none !important;
+    }
+
+    .search-box {
+        display: none !important;
+    }
+}
+
+.hide {
+    visibility: hidden
+}
+
 .login-button {
     display: flex;
     justify-content: flex-end;
@@ -6,12 +79,16 @@
     margin-right: 40px;
 }
 
+.burger-menu {
+    margin-left: 20px;
+}
+
 .login {
     cursor: pointer;
 }
 
 .login-form {
-    width: 650px;
+    width: 40em;
 }
 
 .login-area {
@@ -19,56 +96,49 @@
     justify-content: center;
 }
 
-.nav-section {
+.nav-logo {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-.menu-list {
+.menu {
     display: flex;
     list-style-type: none;
-    margin: 0 auto;
-    margin-bottom: 25px;
+    padding: 20px;
 }
 
-.menu-list li {
-    padding: 10px;
+.menu li a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
 }
 
-.menu-area {
+.nav-menu-area {
     display: flex;
-    align-items: center;
-    position: relative;
     justify-content: center;
-    padding: 0 20px;
-    /* 좌우 패딩 추가 */
-    width: 100%;
-    box-sizing: border-box;
-    /* 패딩 포함하여 크기 계산 */
 }
 
-.search {
-    border: none;
-    outline: none;
-    padding-left: 10px;
-    font-size: 16px;
-}
-
-.search-container {
-    border-bottom: 1px solid #000;
-    padding: 5px;
-    display: flex;
-    align-items: center;
+.search-box {
+    border-bottom: 1px solid black;
     position: absolute;
     right: 20px;
-    margin-top: -50px;
+    padding: 5px;
+}
+
+.search-box input {
+    border: none;
+    margin-left: 5px;
+}
+
+.search-box input:focus {
+    outline: none
 }
 
 .card {
     border: none !important;
     margin-bottom: 10px;
-    cursor: pointer;
+
 }
 
 .card:hover {
@@ -95,7 +165,6 @@
     font-size: 11px;
     color: #63786a;
     font-weight: bold;
-    margin-bottom: 2px;
     height: 20px;
 }
 
