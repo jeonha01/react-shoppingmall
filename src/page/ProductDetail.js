@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import Dropdown from 'react-bootstrap/Dropdown';
-
+import './page.css';
+import Swal from 'sweetalert2';
 
 const ProductDetail = () => {
     let { id } = useParams()
@@ -14,17 +15,25 @@ const ProductDetail = () => {
         console.log(data)
         setProduct(data)
     }
+
+    const buyNow = () => {
+        const result = Swal.fire({
+            title: "구매가 완료되었습니다 😀",
+            icon: "success",
+        })
+    }
+
     useEffect(() => {
         getProductDetail()
     }, [])
-    return <Container>
+    return <Container className='detail-containter'>
         <Row>
             <Col className='product-img'>
-                <img width='636px' src={product?.img}></img>
+                <img width='400px' src={product?.img}></img>
             </Col>
             <Col>
                 <div>{product?.title}</div>
-                <div className='detail-price'>₩ {product?.price}</div>
+                <div className='detail-price'>KRW {product?.price}</div>
                 <div className='choice'>{product?.choice === true ? "Conscious choice" : ""}</div>
                 <Dropdown className='dropdown'>
                     <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
@@ -40,7 +49,7 @@ const ProductDetail = () => {
                         <Dropdown.Item href="#/action-6">XXL</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-                <button className="detail-button">🛒 추가</button>
+                <button className="detail-button" onClick={buyNow}>BUY NOW</button>
             </Col>
         </Row>
     </Container>

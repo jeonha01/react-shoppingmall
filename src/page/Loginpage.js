@@ -1,6 +1,7 @@
 import React from 'react'
 import { Form, Button, Container } from "react-bootstrap"
 import { useNavigate } from 'react-router-dom'
+import './page.css';
 
 const Loginpage = ({ setAuthenticate }) => {
   const navigate = useNavigate()

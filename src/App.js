@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import PrivateRoute from './route/PrivateRoute';
 
 
+
 // 1. 전체상품페이지, 로그인, 상품상세페이지
 // 1-1. 네비게이션 바
 // 2. 전체 상품페이지에서는 전체 상품을 볼 수 있다
@@ -31,11 +32,13 @@ function App() {
   }, [authenticate])
   return (
     <div>
+
       <Navbor authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
         <Route path='/' element={<ProductAll />} />
         <Route path='/login' element={<Loginpage setAuthenticate={setAuthenticate} />} />
         <Route path='/product/:id' element={<PrivateRoute authenticate={authenticate} />} />
+        
       </Routes>
     </div>
   );

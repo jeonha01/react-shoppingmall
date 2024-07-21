@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ProductCard from '../component/ProductCard'
 import { Container, Row, Col, Alert } from 'react-bootstrap'
 import { useSearchParams } from 'react-router-dom'
+import './page.css';
 
 const ProductAll = () => {
     let [products, setProducts] = useState([]);
@@ -31,7 +32,10 @@ const ProductAll = () => {
         getProducts();
     }, [query]);
     return (
-        <Container>
+        
+        <Container className='cards'>
+            <h2 className='banner'>Weekly Best</h2>
+            <div className="background-image"></div> {/* 배경 이미지 */}
             {error ? (
                 <Alert variant="danger" className="text-center">
                     {error}

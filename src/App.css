@@ -1,35 +1,133 @@
+/* Google Fonts에서 EB Garamond 폰트 불러오기 */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+
+/* 전체 페이지에 EB Garamond 폰트 적용 */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "EB Garamond", 'Noto Serif KR', serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    /* 기본 폰트 굵기를 400으로 설정 */
+    font-style: normal;
+}
+
+.background-image {
+    position: absolute;
+    /* 절대 위치로 설정하여 페이지의 특정 위치에 배경을 설정 */
+    top: 0;
+    right: 0;
+    width: 50%;
+    /* 화면의 오른쪽 절반을 차지하도록 설정 */
+    height: 100vh;
+    /* 화면의 뷰포트 높이만큼 설정 */
+    background-image: url('https://downloadwap.com/thumbs2/wallpapers/p2ls/2019/nature/49/427780aa13222883.jpg');
+    /* 배경사진 URL */
+    background-position: center right;
+    /* 오른쪽 중앙에 배경사진 위치 */
+    background-size: cover;
+    /* 배경사진이 요소의 크기에 맞게 조정 */
+    background-repeat: no-repeat;
+    /* 배경사진이 반복되지 않도록 설정 */
+    z-index: -1;
+    /* 다른 요소들 위에 오도록 설정 */
+    filter: contrast(1.2) brightness(1.1) saturate(1.1);
+}
+
+.background-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(240, 240, 240, 0);
+    /* 검정색 반투명 오버레이 */
+    pointer-events: none;
+    /* 클릭 이벤트를 차단 */
+    z-index: 1;
+    /* 배경 이미지 위에 오도록 설정 */
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.cards {
+    margin-top: 1500px;
+}
+
+.detail-containter {
+    margin-top: 200px;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 8;
+    visibility: hidden;
+    transition: visibility 0.5s, opacity 0.5s;
+    opacity: 0;
+}
+
+.overlay.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
 .nav-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-right: 20px;
 
 }
 
+.hide-header {
+    display: flex;
+    justify-content: center;
+}
+
+.hidelogo {
+    position: fixed;
+    font-size: 23px;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 9;
+}
+
 .nav-header * {
     margin-right: 10px;
-    margin-top: 20px;
+    margin-top: 65px;
 }
 
 .side-menu {
     height: 100%;
-    width: 250px;
+    width: 305px;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: 0;
-    left: 0;
-    background-color: burlywood;
+    right: 0;
+    background-color: white;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.8s;
     padding-top: 60px;
-    z-index: 2
+
 }
 
 .side-menu-list button {
-    margin: 5px;
+
     border: none;
     background: none;
-    width: 120px;
+    width: 70%;
+    text-align: left;
+    white-space: nowrap;
 }
 
 .side-menu .closebtn {
@@ -43,45 +141,69 @@
 }
 
 .side-menu-list {
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: 40px;
 }
 
 .side-menu-list button:hover {
-    background-color: beige;
-    border-radius: 3px;
-}
-
-@media screen and (max-width: 63rem) {
-    .hide {
-        visibility: visible !important;
-    }
-
-    .menu {
-        display: none !important;
-    }
-
-    .search-box {
-        display: none !important;
-    }
-}
-
-.hide {
-    visibility: hidden
-}
-
-.login-button {
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px;
-    margin-top: 35px;
-    margin-right: 40px;
+    color: gray;
+    transition: 0.4s;
 }
 
 .burger-menu {
-    margin-left: 20px;
+    margin-right: 20px;
+    position: fixed;
+    z-index: 9;
 }
+
+@media (max-width: 1000px) {
+    .background-image {
+        background-image: url('https://e1.pxfuel.com/desktop-wallpaper/846/4/desktop-wallpaper-waikiki-beach-background-pics-waikiki.jpg');
+        width: 100%;
+        background-position: center;
+    }
+
+    .hi {
+        margin-top: 18px;
+    }
+
+    .hide {
+        display: block !important;
+    }
+
+    .nav-logo {
+        display: none !important;
+    }
+
+    /* .menu {
+        display: none !important;
+    } */
+
+    /* .search-box {
+        display: none !important;
+    } */
+}
+
+.hide {
+    display: none;
+}
+
+.banner {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.login-button {
+    margin-left: 7px;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+
 
 .login {
     cursor: pointer;
@@ -94,12 +216,14 @@
 .login-area {
     display: flex;
     justify-content: center;
+    margin-top: 200px;
 }
 
 .nav-logo {
     display: flex;
-    justify-content: center;
+    position: fixed;
     margin-bottom: 20px;
+    display: block;
 }
 
 .menu {
@@ -119,11 +243,12 @@
     justify-content: center;
 }
 
+.search-text {
+    font-size: 18px;
+}
+
 .search-box {
-    border-bottom: 1px solid black;
-    position: absolute;
-    right: 20px;
-    padding: 5px;
+    margin-top: 30px;
 }
 
 .search-box input {
@@ -138,12 +263,23 @@
 .card {
     border: none !important;
     margin-bottom: 10px;
+    z-index: 5;
 
 }
 
 .card:hover {
-    transform: scale(1.1);
+    animation: bounce 0.5s;
     z-index: 1;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
 }
 
 .icon {
@@ -178,8 +314,8 @@
 }
 
 .detail-button {
-    margin-top: 20px;
-    width: 630px;
+    margin-top: 250px;
+    width: 200px;
     background-color: black;
     color: white;
     padding: 10px;
