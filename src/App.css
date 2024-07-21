@@ -167,9 +167,13 @@ body {
         display: flex !important;
     }
 
-    .header{
+    /* .header{
         justify-content: center;
         z-index: 9;
+    } */
+
+    .hide{
+        visibility: hidden !important;
     }
 
     /* .hide {
@@ -199,7 +203,7 @@ body {
 .hidelogo {
     position: fixed;
     font-size: 30px;
-    
+    visibility: visible;
     font-weight: bold;
     cursor: pointer;
     z-index: 9;
