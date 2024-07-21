@@ -159,7 +159,7 @@ body {
     z-index: 9;
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 63rem) {
     .background-image {
         background-image: url('https://e1.pxfuel.com/desktop-wallpaper/846/4/desktop-wallpaper-waikiki-beach-background-pics-waikiki.jpg');
         width: 100%;
@@ -167,14 +167,16 @@ body {
         z-index: 8;
     }
 
-    
+    .nav-header {
+        display: flex !important;
+    }
 
     .hide {
-        display: block !important;
+        visibility: visible !important;
     }
 
     .nav-logo {
-        display: none !important;
+        visibility: hidden !important;
     }
 
     /* .menu {
@@ -187,7 +189,7 @@ body {
 }
 
 .hide {
-    display: none;
+    visibility: hidden
 }
 
 .banner {
@@ -222,7 +224,7 @@ body {
     display: flex;
     position: fixed;
     margin-bottom: 20px;
-    display: block;
+    visibility: visible;
 }
 
 .menu {
