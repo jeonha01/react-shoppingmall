@@ -85,7 +85,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     margin-right: 20px;
-
+    margin-top: 65px;
 }
 
 .hide-header {
@@ -104,7 +104,7 @@ body {
 
 .nav-header * {
     margin-right: 10px;
-    margin-top: 65px;
+    
 }
 
 .side-menu {
@@ -164,11 +164,10 @@ body {
         background-image: url('https://e1.pxfuel.com/desktop-wallpaper/846/4/desktop-wallpaper-waikiki-beach-background-pics-waikiki.jpg');
         width: 100%;
         background-position: center;
+        z-index: 8;
     }
 
-    .hi {
-        margin-top: 18px;
-    }
+    
 
     .hide {
         display: block !important;
