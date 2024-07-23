@@ -93,13 +93,16 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
                 </div>
 
             </div>
-            <div className="header">
-                <div className="hidelogo hide" onClick={() => navigate('/')}>N A R E U M</div>
-            </div>
+            {/* <div className="header"> */}
+
+            {/* </div> */}
+            
             <div className="nav-header">
+
                 <div className="burger-menu hi">
                     <FontAwesomeIcon icon={faBars} onClick={openMenu} />
                 </div>
+                <div className="hidelogo hide" onClick={() => navigate('/')}>N A R E U M</div>
             </div>
 
 
