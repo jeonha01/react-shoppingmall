@@ -32,7 +32,7 @@ const ProductAll = () => {
         getProducts();
     }, [query]);
     return (
-        
+
         <Container className='cards'>
             <h2 className='banner'>Weekly Best</h2>
             <div className="background-image"></div> {/* 배경 이미지 */}

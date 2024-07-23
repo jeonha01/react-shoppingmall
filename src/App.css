@@ -92,8 +92,6 @@ body {
     z-index: 9;
 }
 
-
-
 /* .nav-header * {
     margin-right: 10px;
 
@@ -110,11 +108,9 @@ body {
     overflow-x: hidden;
     transition: 0.8s;
     padding-top: 60px;
-
 }
 
 .side-menu-list button {
-
     border: none;
     background: none;
     width: 70%;
@@ -151,10 +147,10 @@ body {
     z-index: 9;
     right: 10px;
     top: 60px;
+    cursor: pointer;
 }
 
 .hidelogo {
-
     position: fixed;
     font-size: 30px;
     visibility: visible;
@@ -163,7 +159,6 @@ body {
     z-index: 9;
     margin-left: 40px;
     top: 60px;
-
 }
 
 @media screen and (max-width: 63rem) {
@@ -171,7 +166,7 @@ body {
         background-image: url('https://e1.pxfuel.com/desktop-wallpaper/846/4/desktop-wallpaper-waikiki-beach-background-pics-waikiki.jpg');
         width: 100%;
         background-position: center;
-        z-index: 8;
+        z-index: -1;
     }
 
     .nav-header {
@@ -194,7 +189,6 @@ body {
         z-index: 9;
     } */
 
-
     /* .hide {
         visibility: visible !important;
     } */
@@ -212,16 +206,6 @@ body {
     } */
 }
 
-.nav-logo {
-
-    /* position: fixed;
-    margin-bottom: 20px; */
-    /* visibility: visible; */
-}
-
-
-
-
 .banner {
     justify-content: center;
     display: flex;
@@ -233,8 +217,6 @@ body {
     margin-bottom: 30px;
     font-size: 18px;
 }
-
-
 
 .login {
     cursor: pointer;
@@ -249,7 +231,6 @@ body {
     justify-content: center;
     margin-top: 200px;
 }
-
 
 .menu {
     display: flex;
@@ -289,7 +270,6 @@ body {
     border: none !important;
     margin-bottom: 10px;
     z-index: 5;
-
 }
 
 .card:hover {
