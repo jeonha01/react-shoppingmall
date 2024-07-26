@@ -3,29 +3,21 @@ import ProductCard from '../component/ProductCard'
 import { Container, Row, Col, Alert } from 'react-bootstrap'
 import { useSearchParams } from 'react-router-dom'
 import './page.css';
+import { productAction } from "../redux/actions/productAction";
+import { useDispatch, useSelector } from 'react-redux';
 
 const ProductAll = () => {
-    let [products, setProducts] = useState([]);
+    const products = useSelector((state) => state.product.products)
     const [query, setQuery] = useSearchParams();
     let [error, setError] = useState("");
+    const dispatch = useDispatch()
 
-    const getProducts = async () => {
-        try {
-            let keyword = query.get("q") || "";
-            let url = `https://my-json-server.typicode.com/jeonha01/react-shoppingmall/products?q=${keyword}`;
-            let response = await fetch(url);
-            let data = await response.json();
-            if (data.length < 1) {
-                if (keyword !== "") {
-                    setError(`${keyword}와 일치하는 상품이 없습니다`);
-                } else {
-                    throw new Error("결과가 없습니다");
-                }
-            }
-            setProducts(data);
-        } catch (err) {
-            setError(err.message);
-        }
+    const getProducts = () => {
+
+        let keyword = query.get("q") || "";
+
+        dispatch(productAction.getProducts(keyword))
+
     };
 
     useEffect(() => {
