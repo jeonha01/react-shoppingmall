@@ -4,16 +4,17 @@ import { useParams } from 'react-router-dom'
 import Dropdown from 'react-bootstrap/Dropdown';
 import './page.css';
 import Swal from 'sweetalert2';
+import { productDetailAction } from '../redux/actions/productDetailAction';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchDetail } from '../redux/reducers/productReducer';
 
 const ProductDetail = () => {
     let { id } = useParams()
-    const [product, setProduct] = useState(null)
-    const getProductDetail = async () => {
-        let url = `https://my-json-server.typicode.com/jeonha01/react-shoppingmall/products/${id}`
-        let response = await fetch(url)
-        let data = await response.json()
-        console.log(data)
-        setProduct(data)
+    // const [product, setProduct] = useState(null)
+    const products = useSelector((state) => state.product.selectedItem)
+    const dispatch = useDispatch()
+    const getProductDetail = () => {
+        dispatch(fetchDetail(id))
     }
 
     const buyNow = () => {
@@ -29,12 +30,12 @@ const ProductDetail = () => {
     return <Container className='detail-containter'>
         <Row>
             <Col className='product-img'>
-                <img width='400px' src={product?.img}></img>
+                <img width='400px' src={products?.img}></img>
             </Col>
             <Col>
-                <div>{product?.title}</div>
-                <div className='detail-price'>KRW {product?.price}</div>
-                <div className='choice'>{product?.choice === true ? "Conscious choice" : ""}</div>
+                <div>{products?.title}</div>
+                <div className='detail-price'>KRW {products?.price}</div>
+                <div className='choice'>{products?.choice === true ? "Conscious choice" : ""}</div>
                 <Dropdown className='dropdown'>
                     <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
                         사이즈 선택

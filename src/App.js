@@ -26,17 +26,20 @@ import PrivateRoute from './route/PrivateRoute';
 // 페이지 꾸밀때
 // 1. 세일한 가격 옆에 원가 추가 ex) 16900원 49900원(줄 긋기)
 function App() {
-  const [authenticate, setAuthenticate] = useState(false) // true 로그인 됨, false 로그인 안됨
-  useEffect(() => {
-    console.log(authenticate)
-  }, [authenticate])
+  // const [authenticate, setAuthenticate] = useState(false) // true 로그인 됨, false 로그인 안됨
+  // useEffect(() => {
+  //   console.log(authenticate)
+  // }, [authenticate])
   return (
     <div>
-      <Navbor authenticate={authenticate} setAuthenticate={setAuthenticate} />
+      <Navbor /> 
+      {/* authenticate={authenticate} setAuthenticate={setAuthenticate}  */}
       <Routes>
         <Route path='/' element={<ProductAll />} />
-        <Route path='/login' element={<Loginpage setAuthenticate={setAuthenticate} />} />
-        <Route path='/product/:id' element={<PrivateRoute authenticate={authenticate} />} />
+        <Route path='/login' element={<Loginpage  />} />
+        {/* setAuthenticate={setAuthenticate} */}
+        <Route path='/product/:id' element={<PrivateRoute  />} />
+        {/* authenticate={authenticate} */}
 
       </Routes>
     </div>

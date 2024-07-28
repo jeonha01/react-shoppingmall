@@ -12,7 +12,7 @@ const Loginpage = ({ setAuthenticate }) => {
   const dispatch = useDispatch()
   const loginUser = (event) => {
     event.preventDefault()
-    setAuthenticate(true)
+    // setAuthenticate(true)
     dispatch(authenticateAction.login(id, password))
     navigate('/')
   }

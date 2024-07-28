@@ -5,6 +5,7 @@ import { useSearchParams } from 'react-router-dom'
 import './page.css';
 import { productAction } from "../redux/actions/productAction";
 import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts } from '../redux/reducers/productReducer';
 
 const ProductAll = () => {
     const products = useSelector((state) => state.product.products)
@@ -16,7 +17,7 @@ const ProductAll = () => {
 
         let keyword = query.get("q") || "";
 
-        dispatch(productAction.getProducts(keyword))
+        dispatch(fetchProducts(keyword))
 
     };
 
