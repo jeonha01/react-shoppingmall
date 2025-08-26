@@ -1,0 +1,10 @@
+/* Google Fonts에서 EB Garamond 폰트 불러오기 */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+
+/* 전체 페이지에 EB Garamond 폰트 적용 */
+body {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* 기본 폰트 굵기를 400으로 설정 */
+  font-style: normal;
+}
